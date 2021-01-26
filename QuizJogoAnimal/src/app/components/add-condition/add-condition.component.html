@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Nos ajude a crescer!</h1>
+<div mat-dialog-content>
+  <p>O {{data.animalName}} {{data.conditionName}}, já o {{data.newAnimal}} ...?</p>
+  <mat-form-field>
+    <mat-label>Condição</mat-label>
+    <input matInput aria-label="animal" [(ngModel)]="conditionName">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="continue()">Continuar!</button>
+  <button mat-button (click)="notContinue()">N�o, obrigado!</button>
+</div>

@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Nos Ajude a Melhorar!</h1>
+<div mat-dialog-content>
+  <p>Qual animal você pensou?</p>
+  <mat-form-field>
+    <mat-label>Nome do Animal</mat-label>
+    <input matInput aria-label="animal" [(ngModel)]="animalName">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="continue()">Continuar!</button>
+  <button mat-button (click)="notContinue()">Não, obrigado!</button>
+</div>

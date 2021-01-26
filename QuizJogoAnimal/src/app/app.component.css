@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+}
+
+.margin-top {
+  margin-top: 20%
+}
+
+.flex-item {
+  flex: 1
+}
+
+
