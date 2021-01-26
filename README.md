@@ -5,7 +5,7 @@ Para o funcionamento é necessário ter acesso o Readme da Quiz e efetuado as or
 
 Validado o funcionamento da API é necessário abrir o terminal e executar os seguintes comandos:
 
--> ng install
+-> npm install
 -> ng serve
 
 Executado os comando e validado o funcionamento do mesmo a aplicação está apta para o funcionamento.
