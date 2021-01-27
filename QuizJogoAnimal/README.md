@@ -2,7 +2,7 @@
 
 Para o funcionamento é necessário ter acesso o Readme da API e efetuado as orientações. 
 
--> Segue link: https://github.com/guilherme3218/Jogo-Animal-API/blob/main/README.md
+->Segue link: https://github.com/guilherme3218/Jogo-Animal-API/blob/main/README.md
 
 Validado o funcionamento da API é necessário abrir o terminal e executar os seguintes comandos:
 
