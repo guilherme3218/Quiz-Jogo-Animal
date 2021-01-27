@@ -12,7 +12,7 @@ export class SnackBarService {
 
 
   openSnackBarWithMessage(msg: string) {
-    this.snackBar.open(msg, 'Entendi', {
+    this.snackBar.open(msg, 'Entendido', {
       duration: 5 * 1000,
     });
   }

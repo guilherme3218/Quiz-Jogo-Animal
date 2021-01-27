@@ -47,7 +47,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Método para iniciar o jogo
+   * Mï¿½todo para iniciar o jogo
    */
   startQuiz() {
     this.animalService.getAnimals()
@@ -59,7 +59,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Método para mostrar mensagem de erro na tela
+   * Mï¿½todo para mostrar mensagem de erro na tela
    * @param msg Mensagem para ser exibido
    */
   openSnackBar(msg: string) {
@@ -67,7 +67,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Método para iniciar o dialogo do jogo
+   * Mï¿½todo para iniciar o dialogo do jogo
    */
   startQuizDialog(): void {
     const dialogRef = this.dialog.open(StartQuizComponent, {
@@ -75,12 +75,12 @@ export class QuestionsComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(res => {
-      res ? this.initTheQuiz() : console.log('Não quer jogar');
+      res ? this.initTheQuiz() : console.log('Nï¿½o quer jogar');
     });
   }
 
   /**
-   *Iniciar o jogo selecionando o primeiro animal e sua primeira condição
+   *Iniciar o jogo selecionando o primeiro animal e sua primeira condiï¿½ï¿½o
    */
   initTheQuiz() {
     const firstCondition = this.animals[0];
@@ -88,8 +88,8 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Exibe o diálogo com a condição passada no parâmetro
-   * @param condition Condição do animal
+   * Exibe o diï¿½logo com a condiï¿½ï¿½o passada no parï¿½metro
+   * @param condition Condiï¿½ï¿½o do animal
    */
   openCondition(condition: Condition) {
     const dialogRef = this.dialog.open(ConditionComponent, {
@@ -103,7 +103,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Método para finalizar o jogo
+   * Mï¿½todo para finalizar o jogo
    * @param animal Animal para adivinhar
    */
   finishQuiz(animal: Animal) {
@@ -119,7 +119,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Abrir diálogo de parabenizacao de acerto
+   * Abrir diï¿½logo de parabenizacao de acerto
    */
   congrats() {
     this.conditionsUsed = new Array<Condition>();
@@ -129,7 +129,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Abrir diálogo para parabenizacao por ajudar na "inteligência" do jogo
+   * Abrir diï¿½logo para parabenizacao por ajudar na "inteligï¿½ncia" do jogo
    */
   congratsHelp() {
     this.dialog.open(CongratsHelpComponent, {
@@ -138,7 +138,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Abre diálogo para adicionar um animal no jogo
+   * Abre diï¿½logo para adicionar um animal no jogo
    */
   addAnimal() {
     const dialogRef = this.dialog.open(AddAnimalComponent, {
@@ -150,8 +150,8 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Abre diálogo para dicionar uma nova condição ao novo animal do jogo
-   * @param animalName Animal Restante que não foi acertado
+   * Abre diï¿½logo para dicionar uma nova condiï¿½ï¿½o ao novo animal do jogo
+   * @param animalName Animal Restante que nï¿½o foi acertado
    */
   addCondition(animalName: string) {
     this.newAnimal = {
@@ -175,8 +175,8 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Salva a condição e o animal na API
-   * @param condition Nova condição
+   * Salva a condiï¿½ï¿½o e o animal na API
+   * @param condition Nova condiï¿½ï¿½o
    */
   saveNewAnimal(condition: string) {
     this.animalService.saveCondition(condition)
@@ -194,8 +194,8 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Remove da lista animais com a condição passada no parâmetro
-   * @param condition Condição
+   * Remove da lista animais com a condiï¿½ï¿½o passada no parï¿½metro
+   * @param condition Condiï¿½ï¿½o
    */
   removeAnimalWithCondition(condition: Condition) {
     this.animals = this.animals.filter(animal => !this.haveConditionINArray(animal.conditions, condition));
@@ -212,8 +212,8 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Remove animais que não possuem a condição passada no parâmetro
-   * @param condition Condição
+   * Remove animais que nï¿½o possuem a condiï¿½ï¿½o passada no parï¿½metro
+   * @param condition Condiï¿½ï¿½o
    */
   removeAnimalWithoutCondition(condition: Condition) {
     this.conditionsUsed.push(condition);
@@ -233,15 +233,15 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Remove a condição de todos os animais restantes
-   * @param condition Condição
+   * Remove a condiï¿½ï¿½o de todos os animais restantes
+   * @param condition Condiï¿½ï¿½o
    */
   removeConditionOfAll(condition: Condition) {
     this.animals.forEach(animal => animal.conditions = animal.conditions.filter(element => element.id !== condition.id));
   }
 
   /**
-   * Verifica qual o próximo animal que possuem uma nova condição para ser usada no jogo
+   * Verifica qual o prï¿½ximo animal que possuem uma nova condiï¿½ï¿½o para ser usada no jogo
    */
   nextCondition() {
     let index = 0;
@@ -254,7 +254,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Verifica se possue condições
+   * Verifica se possue condiï¿½ï¿½es
    * @param index
    */
   haveCondition(index: number): boolean {
@@ -262,9 +262,9 @@ export class QuestionsComponent implements OnInit {
   }
 
   /**
-   * Verifica se a lista possue a condição passada no parâmetro
-   * @param conditions Lista de condições do animal
-   * @param condition Condição para verificar
+   * Verifica se a lista possue a condiï¿½ï¿½o passada no parï¿½metro
+   * @param conditions Lista de condiï¿½ï¿½es do animal
+   * @param condition Condiï¿½ï¿½o para verificar
    */
   haveConditionINArray(conditions: Array<Condition>, condition: Condition): boolean {
     return conditions.filter(element => element.id === condition.id).length > 0;
