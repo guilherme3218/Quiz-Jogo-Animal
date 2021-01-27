@@ -1,12 +1,13 @@
 # Quiz
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+Para o funcionamento é necessário ter acesso o Readme da API e efetuado as orientações. 
+-> Segue link: https://github.com/guilherme3218/Jogo-Animal-API/blob/main/README.md
 
-## Development server
-run `ng install`
-run `ng serve`
+Validado o funcionamento da API é necessário abrir o terminal e executar os seguintes comandos:
 
-Abrir o navegador em http://localhost:4200
+-> npm install 
+-> ng serve
 
+Executado os comando e validado o funcionamento do mesmo a aplicação está apta para o funcionamento.
 
-remember:  Para funcionar você precisa executar a API primeiro.
+Segue o link da aplicação: http://localhost:4200
